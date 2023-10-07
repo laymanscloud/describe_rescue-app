@@ -1,0 +1,49 @@
+Name:         rescue-app/n<br/>
+Namespace:    default/n<br/>
+Priority:     0/n<br/>
+Node:         k8s-node-01/10.20.30.40/n<br/>
+Start Time:   Wed, 06 Oct 2023 10:00:00 +0000/n<br/>
+Labels:       app=rescue/n<br/>
+Annotations:  <none>/n<br/>
+Status:       Running/n<br/>
+IP:           10.244.1.10/n<br/>
+IPs:/n<br/>
+  IP:           10.244.1.10/n<br/>
+Controlled By:  ReplicaSet/rescue-app-76df748df7/n<br/>
+Containers:/n<br/>
+  rescue-container:/n<br/>
+    Container ID:   docker://e8d68b654f4d/n<br/>
+    Image:          nginx:latest/n<br/>
+    Image ID:       docker-pullable://nginx@sha256:b543f6d0983fbc25b9874e22f4fe257a567111da96fd1d8f1b44315f1236398c/n<br/>
+    Port:           80/TCP/n<br/>
+    Host Port:      0/TCP/n<br/>
+    State:          Running/n<br/>
+      Started:      Wed, 06 Oct 2023 10:01:00 +0000/n<br/>
+    Ready:          True/n<br/>
+    Restart Count:  0/n<br/>
+    Environment:    <none>/n<br/>
+    Mounts:/n<br/>
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-xyz12 (ro)/n<br/>
+Conditions:/n<br/>
+  Type              Status/n<br/>
+  Initialized       True /n<br/>
+  Ready             True /n<br/>
+  ContainersReady   True /n<br/>
+  PodScheduled      True /n<br/>
+Volumes:/n<br/>
+  default-token-xyz12:/n<br/>
+    Type:        Secret (a volume populated by a Secret)/n<br/>
+    SecretName:  default-token-xyz12/n<br/>
+    Optional:    false/n<br/>
+QoS Class:       BestEffort/n<br/>
+Node-Selectors:  <none>/n<br/>
+Tolerations:/n<br/>
+  node.kubernetes.io/not-ready:NoExecute for 300s/n<br/>
+  node.kubernetes.io/unreachable:NoExecute for 300s/n<br/>
+Events:/n<br/>
+  Type    Reason     Age   From               Message/n<br/>
+  ----    ------     ----  ----               -------/n<br/>
+  Normal  Scheduled  5m    default-scheduler  Successfully assigned default/rescue-app to k8s-node-01/n<br/>
+  Normal  Pulled     4m    kubelet            Successfully pulled image "nginx:latest"/n<br/>
+  Normal  Created    4m    kubelet            Created container rescue-container/n<br/>
+  Normal  Started    4m    kubelet            Started container rescue-container/n<br/>
