@@ -1,0 +1,2 @@
+NAME         READY   STATUS    RESTARTS   AGE   IP             NODE    NOMINATED NODE   READINESS GATES
+rescue-pod   1/1     Running   0          10m   172.16.104.1   node2   <none>           <none>
