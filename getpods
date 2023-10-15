@@ -1,5 +1,2 @@
-NAME                READY   STATUS    RESTARTS   AGE
-rescue-pod-a4f3Z    1/1     Running   0          10m
-rescue-pod-7gT2w    1/1     Running   0          10m
-rescue-pod-p5r9K    1/1     Running   0          9m
-rescue-pod-j6L8x    1/1     Running   0          9m
+NAME         READY   STATUS    RESTARTS   AGE
+rescue-pod   1/1     Running   0          34s
