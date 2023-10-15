@@ -1,0 +1,2 @@
+NAME         READY   STATUS         RESTARTS   AGE
+mining-pod   0/1     ErrImagePull   0          43s
