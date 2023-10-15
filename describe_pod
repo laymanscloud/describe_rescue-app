@@ -1,0 +1,53 @@
+Name:             rescue-pod
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             node2/192.168.50.28
+Start Time:       Sun, 15 Oct 2023 21:28:45 +0000
+Labels:           run=rescue-pod
+Annotations:      cni.projectcalico.org/containerID: 76481effd748c8c518e1d4825ddafb9aac45eb70574b62624e17c2577f27fdd2
+                  cni.projectcalico.org/podIP: 172.16.104.1/32
+                  cni.projectcalico.org/podIPs: 172.16.104.1/32
+Status:           Running
+IP:               172.16.104.1
+IPs:
+  IP:  172.16.104.1
+Containers:
+  rescue-pod:
+    Container ID:   containerd://c8147f5b2706a8383050a221c1ad61e21878f3a1e6a8bbbd2f09bc55a89df57d
+    Image:          nginx
+    Image ID:       docker.io/library/nginx@sha256:b4af4f8b6470febf45dc10f564551af682a802eda1743055a7dfc8332dffa595
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Sun, 15 Oct 2023 21:29:07 +0000
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-dcc9r (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-dcc9r:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  5m33s  default-scheduler  Successfully assigned default/rescue-pod to node2
+  Normal  Pulling    5m30s  kubelet            Pulling image "nginx"
+  Normal  Pulled     5m12s  kubelet            Successfully pulled image "nginx" in 17.98334938s (17.9833919s including waiting)
+  Normal  Created    5m11s  kubelet            Created container rescue-pod
+  Normal  Started    5m11s  kubelet            Started container rescue-pod
